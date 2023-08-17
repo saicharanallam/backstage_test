@@ -1,0 +1,18 @@
+# app-config.yaml
+
+# This is a configuration file for a Backstage app.
+
+apiVersion: backstage.io/v1alpha1
+kind: Application
+metadata:
+  name: sample-app
+  description: A sample Backstage app
+
+# Sections can be added for various configuration settings.
+# Here's an example for techDocs, which is a plugin for managing documentation.
+
+spec:
+  techdocs:
+    builder: techdocs-builder
+    publisher:
+      type: techdocs-local
